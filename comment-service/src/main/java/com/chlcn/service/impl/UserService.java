@@ -1,6 +1,7 @@
-package com.chlcn.service;
+package com.chlcn.service.impl;
 
 import com.chlcn.mapper.UserMapper;
+import com.chlcn.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
