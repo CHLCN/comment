@@ -348,3 +348,283 @@ java.sql.SQLSyntaxErrorException: Unknown column 'parent_comment_id' in 'where c
 2025-08-04 02:54:04.195  INFO 13528 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2025-08-04 02:54:04.195  INFO 13528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-04 02:54:04.200  INFO 13528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-04 13:55:27.456  INFO 25316 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 25316 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 13:55:27.458  INFO 25316 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 13:55:28.015  INFO 25316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 13:55:28.020  INFO 25316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 13:55:28.020  INFO 25316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 13:55:28.083  INFO 25316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 13:55:28.084  INFO 25316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 596 ms
+2025-08-04 13:55:28.340  INFO 25316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 13:55:28.432  INFO 25316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 13:55:28.436  INFO 25316 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 1.295 seconds (JVM running for 2.063)
+2025-08-04 13:55:31.547  INFO 25316 --- [http-nio-8488-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 13:55:31.547  INFO 25316 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-04 13:55:31.547  INFO 25316 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-04 13:55:31.565  INFO 25316 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 13:55:31.566  INFO 25316 --- [http-nio-8488-exec-1] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 13:55:31.586  INFO 25316 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-04 13:55:32.513  INFO 25316 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-04 13:55:32.563  INFO 25316 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 13:56:12.280  INFO 25316 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 13:56:12.280  INFO 25316 --- [http-nio-8488-exec-4] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 13:56:12.350  INFO 25316 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 13:58:09.698  INFO 25316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 13:58:09.698  INFO 25316 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-04 13:58:09.707  INFO 25316 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-04 13:58:11.599  INFO 11904 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 11904 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 13:58:11.600  INFO 11904 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 13:58:12.031  INFO 11904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 13:58:12.035  INFO 11904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 13:58:12.035  INFO 11904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 13:58:12.093  INFO 11904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 13:58:12.093  INFO 11904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 474 ms
+2025-08-04 13:58:12.296  INFO 11904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 13:58:12.381  INFO 11904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 13:58:12.385  INFO 11904 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 0.969 seconds (JVM running for 1.612)
+2025-08-04 13:58:18.059  INFO 11904 --- [http-nio-8488-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 13:58:18.059  INFO 11904 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-04 13:58:18.060  INFO 11904 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-04 13:58:18.075  INFO 11904 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 13:58:18.076  INFO 11904 --- [http-nio-8488-exec-1] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 13:58:18.091  INFO 11904 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-04 13:58:18.980  INFO 11904 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-04 13:58:19.034  INFO 11904 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 13:58:21.432  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 13:58:21.432  INFO 11904 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 13:58:21.506  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:03:32.390  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19ac8970 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:37.407  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a764b1a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:42.416  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77ecb42d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:47.423  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e45141d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:52.334  WARN 11904 --- [http-nio-8488-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2211064c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:52.428  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@148c376f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:57.337  WARN 11904 --- [http-nio-8488-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2cd6fc7e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:57.446  WARN 11904 --- [http-nio-8488-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12c9f3af (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:03:57.459 ERROR 11904 --- [http-nio-8488-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30081ms.
+### The error may exist in file [D:\code\comment\comment-orm\target\classes\mapper\CommentMapper.xml]
+### The error may involve com.chlcn.mapper.CommentMapper.addComment
+### The error occurred while executing an update
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30081ms.] with root cause
+
+com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_391]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_391]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_391]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_391]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:573) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2492) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.3.3.jar:5.3.3]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.3.3.jar:5.3.3]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.3.3.jar:5.3.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181) ~[mybatis-3.5.9.jar:3.5.9]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_391]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_391]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_391]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_391]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.sun.proxy.$Proxy52.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.9.jar:3.5.9]
+	at com.sun.proxy.$Proxy53.addComment(Unknown Source) ~[na:na]
+	at com.chlcn.service.impl.CommentServiceImpl.addComment(CommentServiceImpl.java:33) ~[classes/:na]
+	at com.chlcn.controller.CommentController.addComment(CommentController.java:49) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_391]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_391]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_391]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_391]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.3.jar:5.3.3]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_391]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_391]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_391]
+
+2025-08-04 14:04:02.348  WARN 11904 --- [http-nio-8488-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28e96d3c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:04:07.361  WARN 11904 --- [http-nio-8488-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6debf645 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-04 14:04:43.364  INFO 11904 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:04:43.364  INFO 11904 --- [http-nio-8488-exec-2] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:04:43.439  INFO 11904 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:04:52.861  INFO 11904 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:04:52.861  INFO 11904 --- [http-nio-8488-exec-1] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:04:52.966  INFO 11904 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:05:30.237  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:30.238  INFO 11904 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:30.308  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:05:33.993  INFO 11904 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:33.994  INFO 11904 --- [http-nio-8488-exec-4] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:34.069  INFO 11904 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:05:37.106  INFO 11904 --- [http-nio-8488-exec-6] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:37.106  INFO 11904 --- [http-nio-8488-exec-6] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:05:37.176  INFO 11904 --- [http-nio-8488-exec-6] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:06:25.906  INFO 11904 --- [http-nio-8488-exec-7] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:06:25.906  INFO 11904 --- [http-nio-8488-exec-7] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:06:25.972  INFO 11904 --- [http-nio-8488-exec-7] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=0, list=[])
+2025-08-04 14:09:25.316  INFO 11904 --- [http-nio-8488-exec-10] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=123, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:09:25.316  INFO 11904 --- [http-nio-8488-exec-10] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=123, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:09:25.425  INFO 11904 --- [http-nio-8488-exec-10] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=3, list=[CommentDetailInfoDto(id=6, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:04:04 CST 2025, updateTime=Mon Aug 04 14:04:04 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=7, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:03:47 CST 2025, updateTime=Mon Aug 04 14:03:47 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=5, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=qqq, status=0, score=10, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 02:49:07 CST 2025, updateTime=Mon Aug 04 02:49:07 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:09:25.425  INFO 11904 --- [http-nio-8488-exec-10] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=3, list=[CommentInfoEntity(userId=12, commentId=6, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=7, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=5, module=1, resourceId=123, content=qqq, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:11:38.238  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=123, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:11:38.238  INFO 11904 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=123, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:11:38.336  INFO 11904 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=3, list=[CommentDetailInfoDto(id=6, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:04:04 CST 2025, updateTime=Mon Aug 04 14:04:04 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=7, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:03:47 CST 2025, updateTime=Mon Aug 04 14:03:47 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=5, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=qqq, status=0, score=10, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 02:49:07 CST 2025, updateTime=Mon Aug 04 02:49:07 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:11:38.336  INFO 11904 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=3, list=[CommentInfoEntity(userId=12, commentId=6, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=7, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=5, module=1, resourceId=123, content=qqq, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:11:46.001  INFO 11904 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:11:46.001  INFO 11904 --- [http-nio-8488-exec-4] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:11:46.104  INFO 11904 --- [http-nio-8488-exec-4] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=1, list=[CommentDetailInfoDto(id=8, parentCommentId=null, rootCommentId=null, userId=1234, username=null, avatar=null, repliedUsername=null, module=1, resourceId=456, content=test222, status=0, score=9, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:10:58 CST 2025, updateTime=Mon Aug 04 14:10:58 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:11:46.104  INFO 11904 --- [http-nio-8488-exec-4] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=1, list=[CommentInfoEntity(userId=1234, commentId=8, module=1, resourceId=456, content=test222, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:16:39.556  INFO 11904 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:16:39.556  INFO 11904 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-04 14:16:39.561  INFO 11904 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-04 14:16:41.474  INFO 34248 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 34248 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 14:16:41.475  INFO 34248 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 14:16:41.930  INFO 34248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 14:16:41.936  INFO 34248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 14:16:41.936  INFO 34248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 14:16:41.999  INFO 34248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 14:16:42.000  INFO 34248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 505 ms
+2025-08-04 14:16:42.233  INFO 34248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:16:42.316  INFO 34248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 14:16:42.321  INFO 34248 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 1.033 seconds (JVM running for 1.745)
+2025-08-04 14:17:32.405  INFO 34248 --- [http-nio-8488-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 14:17:32.405  INFO 34248 --- [http-nio-8488-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-04 14:17:32.405  INFO 34248 --- [http-nio-8488-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-04 14:17:32.419  INFO 34248 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:17:32.420  INFO 34248 --- [http-nio-8488-exec-2] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:17:32.434  INFO 34248 --- [http-nio-8488-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-04 14:17:33.381  INFO 34248 --- [http-nio-8488-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-04 14:17:33.503  INFO 34248 --- [http-nio-8488-exec-2] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=1, list=[CommentDetailInfoDto(id=8, parentCommentId=null, rootCommentId=null, userId=1234, username=null, avatar=null, repliedUsername=null, module=1, resourceId=456, content=test222, status=0, score=9, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:10:58 CST 2025, updateTime=Mon Aug 04 14:10:58 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:17:33.504  INFO 34248 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=1, list=[CommentInfoEntity(userId=1234, commentId=8, module=1, resourceId=456, content=test222, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:17:43.026  INFO 34248 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=123, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:17:43.026  INFO 34248 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=123, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:17:43.163  INFO 34248 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=3, list=[CommentDetailInfoDto(id=6, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:04:04 CST 2025, updateTime=Mon Aug 04 14:04:04 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=7, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:03:47 CST 2025, updateTime=Mon Aug 04 14:03:47 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=5, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=qqq, status=0, score=10, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 02:49:07 CST 2025, updateTime=Mon Aug 04 02:49:07 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:17:43.163  INFO 34248 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=3, list=[CommentInfoEntity(userId=12, commentId=6, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=7, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=5, module=1, resourceId=123, content=qqq, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:19:08.897  INFO 34248 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:08.897  INFO 34248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-04 14:19:08.905  INFO 34248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-04 14:19:10.632  INFO 11884 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 11884 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 14:19:10.634  INFO 11884 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 14:19:11.040  INFO 11884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 14:19:11.044  INFO 11884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 14:19:11.044  INFO 11884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 14:19:11.092  INFO 11884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 14:19:11.093  INFO 11884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 442 ms
+2025-08-04 14:19:11.279  INFO 11884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:11.354  INFO 11884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 14:19:11.359  INFO 11884 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 0.895 seconds (JVM running for 1.502)
+2025-08-04 14:19:23.402  INFO 11884 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:25.138  INFO 30332 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 30332 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 14:19:25.139  INFO 30332 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 14:19:25.528  INFO 30332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 14:19:25.531  INFO 30332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 14:19:25.531  INFO 30332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 14:19:25.604  INFO 30332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 14:19:25.605  INFO 30332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 448 ms
+2025-08-04 14:19:25.786  INFO 30332 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:25.863  INFO 30332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 14:19:25.867  INFO 30332 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 0.911 seconds (JVM running for 1.492)
+2025-08-04 14:19:31.103  INFO 30332 --- [http-nio-8488-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 14:19:31.103  INFO 30332 --- [http-nio-8488-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-04 14:19:31.104  INFO 30332 --- [http-nio-8488-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-04 14:19:31.121  INFO 30332 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=123, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:19:31.121  INFO 30332 --- [http-nio-8488-exec-2] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=123, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:19:31.137  INFO 30332 --- [http-nio-8488-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-04 14:19:32.007  INFO 30332 --- [http-nio-8488-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-04 14:19:32.103  INFO 30332 --- [http-nio-8488-exec-2] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=3, list=[CommentDetailInfoDto(id=6, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:04:04 CST 2025, updateTime=Mon Aug 04 14:04:04 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=7, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=testtest, status=0, score=8, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:03:47 CST 2025, updateTime=Mon Aug 04 14:03:47 CST 2025, replyCount=null, hotScore=null), CommentDetailInfoDto(id=5, parentCommentId=null, rootCommentId=null, userId=12, username=null, avatar=null, repliedUsername=null, module=1, resourceId=123, content=qqq, status=0, score=10, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 02:49:07 CST 2025, updateTime=Mon Aug 04 02:49:07 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:19:32.104  INFO 30332 --- [http-nio-8488-exec-2] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=3, list=[CommentInfoEntity(userId=12, commentId=6, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=7, module=1, resourceId=123, content=testtest, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null), CommentInfoEntity(userId=12, commentId=5, module=1, resourceId=123, content=qqq, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:19:38.624  INFO 30332 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 14:19:38.624  INFO 30332 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 14:19:38.734  INFO 30332 --- [http-nio-8488-exec-3] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=1, list=[CommentDetailInfoDto(id=8, parentCommentId=null, rootCommentId=null, userId=1234, username=null, avatar=null, repliedUsername=null, module=1, resourceId=456, content=test222, status=0, score=9, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:10:58 CST 2025, updateTime=Mon Aug 04 14:10:58 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 14:19:38.734  INFO 30332 --- [http-nio-8488-exec-3] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=1, list=[CommentInfoEntity(userId=1234, commentId=8, module=1, resourceId=456, content=test222, contentTime=null, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
+2025-08-04 14:19:54.743  INFO 30332 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:54.743  INFO 30332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-04 14:19:54.748  INFO 30332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-04 14:19:56.384  INFO 36228 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 36228 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 14:19:56.385  INFO 36228 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 14:19:56.829  INFO 36228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 14:19:56.833  INFO 36228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 14:19:56.834  INFO 36228 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 14:19:56.887  INFO 36228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 14:19:56.887  INFO 36228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 483 ms
+2025-08-04 14:19:57.065  INFO 36228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 14:19:57.143  INFO 36228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 14:19:57.148  INFO 36228 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 0.945 seconds (JVM running for 1.576)
+2025-08-04 22:46:39.682  INFO 36228 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 22:56:18.072  INFO 30960 --- [main] com.chlcn.CommentApplication             : Starting CommentApplication using Java 1.8.0_391 on LAPTOP-DPUT71H4 with PID 30960 (D:\code\comment\comment-main\target\classes started by chl in D:\code\comment)
+2025-08-04 22:56:18.075  INFO 30960 --- [main] com.chlcn.CommentApplication             : No active profile set, falling back to default profiles: default
+2025-08-04 22:56:18.571  INFO 30960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8488 (http)
+2025-08-04 22:56:18.577  INFO 30960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-04 22:56:18.577  INFO 30960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2025-08-04 22:56:18.642  INFO 30960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-04 22:56:18.642  INFO 30960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2025-08-04 22:56:18.875  INFO 30960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 22:56:18.978  INFO 30960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8488 (http) with context path ''
+2025-08-04 22:56:18.984  INFO 30960 --- [main] com.chlcn.CommentApplication             : Started CommentApplication in 1.108 seconds (JVM running for 1.705)
+2025-08-04 22:56:40.970  INFO 30960 --- [http-nio-8488-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 22:56:40.971  INFO 30960 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-04 22:56:40.971  INFO 30960 --- [http-nio-8488-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-04 22:56:40.989  INFO 30960 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-入参:QueryCommentRequestParam(userId=null, module=1, resourceId=456, score=null, order=null, replyNum=null, pageNum=null, pageSize=null)
+2025-08-04 22:56:40.990  INFO 30960 --- [http-nio-8488-exec-1] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-入参:CommentInfoDto(id=null, userId=null, module=1, resourceId=456, content=null, status=null, score=null, order=null, starNum=null, isDelete=null, createTime=null, updateTime=null, pageNum=null, pageSize=null)
+2025-08-04 22:56:41.009  INFO 30960 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-04 22:56:41.954  INFO 30960 --- [http-nio-8488-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-04 22:56:42.051  INFO 30960 --- [http-nio-8488-exec-1] c.chlcn.service.impl.CommentServiceImpl  : 查询评论-queryCommentByParam-出参:CommentResultInfoDto(total=1, list=[CommentDetailInfoDto(id=8, parentCommentId=null, rootCommentId=null, userId=1234, username=null, avatar=null, repliedUsername=null, module=1, resourceId=456, content=test222, status=0, score=9, starNum=0, hasStar=null, isDelete=0, createTime=Mon Aug 04 14:10:58 CST 2025, updateTime=Mon Aug 04 14:10:58 CST 2025, replyCount=null, hotScore=null)])
+2025-08-04 22:56:42.052  INFO 30960 --- [http-nio-8488-exec-1] com.chlcn.controller.CommentController   : 查询评论-queryComment-出参:CommentResultParam(total=1, list=[CommentInfoEntity(userId=1234, commentId=8, module=1, resourceId=456, content=test222, contentTime=2025-08-04 14:10:58, starNum=0, avatar=null, username=null, replyNum=null, status=0, replyList=null)])
