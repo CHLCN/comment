@@ -1,5 +1,6 @@
 package com.chlcn.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.chlcn.dto.CommentDetailInfoDto;
 import com.chlcn.dto.CommentInfoDto;
 import com.chlcn.dto.CommentResultInfoDto;
@@ -26,24 +27,44 @@ public class CommentServiceImpl implements ICommentService {
     @Autowired
     private CommentMapper commentMapper;
 
+    /**
+     * 增加评论
+     * @param dto
+     * @return int
+     */
     @Override
     public int addComment(CommentInfoDto dto) {
-        CommentEntity commentEntity = new CommentEntity();
-        BeanUtils.copyProperties(dto, commentEntity);
-        int count = commentMapper.addComment(commentEntity);
-        return count;
+        try{
+            log.info("增加评论-service层-addComment-入参:{}", JSON.toJSONString(dto));
+            CommentEntity commentEntity = new CommentEntity();
+            BeanUtils.copyProperties(dto, commentEntity);
+            int count = commentMapper.addComment(commentEntity);
+            log.info("增加评论-service层-addComment-出参:{}", count);
+            return count;
+        }catch (Exception e){
+            log.error("增加评论-service层-addComment-异常:",e);
+            return -1;
+        }
     }
 
 
+    /**
+     * 删除评论
+     * @param dto
+     * @return
+     */
     @Override
     public int deleteComment(CommentInfoDto dto) {
-
-        log.info("删除评论-入参:{}", dto);
-        int count = commentMapper.deleteCommentById(dto.getId());
-
-        return count;
-
-
+        try {
+            log.info("删除评论-service层-deleteComment-入参:{}", JSON.toJSONString(dto));
+            // todo 参数信息校验
+            int count = commentMapper.deleteCommentById(dto.getId());
+            log.info("删除评论-service层-deleteComment-出参:{}", count);
+            return count;
+        }catch (Exception e){
+            log.error("删除评论-service层-deleteComment-异常:", e);
+            return -1;
+        }
     }
 
     /**
@@ -53,31 +74,33 @@ public class CommentServiceImpl implements ICommentService {
      */
     @Override
     public CommentResultInfoDto queryCommentByParam(CommentInfoDto dto) {
-
-        log.info("查询评论-queryCommentByParam-入参:{}", dto);
-        CommentResultInfoDto resultInfoDto = new CommentResultInfoDto();
-        // 步骤1：检查参数
-        checkParam(dto);
-        // 步骤2：构建查询条件
-        CommentParam queryParam = buildQueryCommentParam(dto);
-
-        // 步骤3：查询评论总数
-
-        int total = commentMapper.countCommentByParam(queryParam);
-        resultInfoDto.setTotal(Long.valueOf(total+""));
-        if(total<=0){
+        try{
+            log.info("查询评论-service层-queryCommentByParam-入参:{}", JSON.toJSONString(dto));
+            CommentResultInfoDto resultInfoDto = new CommentResultInfoDto();
+            // 步骤1：检查参数
+            checkParam(dto);
+            // 步骤2：构建查询条件
+            CommentParam queryParam = buildQueryCommentParam(dto);
+            // 步骤3：查询评论总数
+            log.info("查询评论-service层-数据库-入参:{}", dto);
+            int total = commentMapper.countCommentByParam(queryParam);
+            resultInfoDto.setTotal(Long.valueOf(total+""));
+            if(total<=0){
+                return resultInfoDto;
+            }
+            // 步骤4：查询评论列表
+            List<CommentEntity> commentEntities = commentMapper.queryCommentByParam(queryParam);
+            log.info("查询评论-service层-数据库-出参:{}", dto);
+            // 步骤5：组装结果集
+            List<CommentDetailInfoDto> list = buildResultList(commentEntities);
+            log.info("查询评论-service层-queryCommentByParam-出参:{}", resultInfoDto);
+            resultInfoDto.setList(list);
             return resultInfoDto;
+        }catch(Exception e){
+            log.error("查询评论-service层-deleteComment-异常:", e);
+            return new CommentResultInfoDto();
         }
-        // 步骤4：查询评论列表
 
-        List<CommentEntity> commentEntities = commentMapper.queryCommentByParam(queryParam);
-
-        // 步骤5：组装结果集
-        List<CommentDetailInfoDto> list = buildResultList(commentEntities);
-
-        resultInfoDto.setList(list);
-        log.info("查询评论-queryCommentByParam-出参:{}", resultInfoDto);
-        return resultInfoDto;
 
     }
 
