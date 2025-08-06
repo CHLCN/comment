@@ -42,7 +42,23 @@
     <delete id="deleteCommentById" parameterType="java.lang.Long">
         delete from tb_comment where id=#{id}
     </delete>
-
+    <update id="updateCommentByParam" parameterType="com.chlcn.entity.CommentParam">
+        update tb_comment set is_delete=#{isDelete},update_time=#{updateTime}
+        <where>
+            <if test="module!=null">
+                and module=#{module}
+            </if>
+            <if test="resourceId!=null">
+                and resource_id=#{resourceId}
+            </if>
+            <if test="userId!=null">
+                and user_id=#{userId}
+            </if>
+            <if test="id!=null">
+                and id=#{id}
+            </if>
+        </where>
+    </update>
     <select id="queryCommentByParam" resultMap="CommentResultMap" parameterType="com.chlcn.entity.CommentParam">
         select * from tb_comment
         <where>

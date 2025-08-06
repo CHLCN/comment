@@ -22,6 +22,12 @@ public interface CommentMapper {
     int deleteCommentById(Long id);
 
     /**
+     * 逻辑删除
+     * @return
+     */
+    int updateCommentByParam(CommentParam commentParam);
+
+    /**
      * 查询评论
      * @return
      */

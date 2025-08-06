@@ -16,6 +16,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,7 +48,6 @@ public class CommentServiceImpl implements ICommentService {
         }
     }
 
-
     /**
      * 删除评论
      * @param dto
@@ -57,8 +57,14 @@ public class CommentServiceImpl implements ICommentService {
     public int deleteComment(CommentInfoDto dto) {
         try {
             log.info("删除评论-service层-deleteComment-入参:{}", JSON.toJSONString(dto));
-            // todo 参数信息校验
-            int count = commentMapper.deleteCommentById(dto.getId());
+
+            CommentParam updateParam = new CommentParam();
+            updateParam.setId(dto.getId());
+            updateParam.setModule(dto.getModule());
+            updateParam.setUserId(dto.getUserId());
+            updateParam.setIsDelete(dto.getIsDelete());
+            updateParam.setUpdateTime(new Date());
+            int count = commentMapper.updateCommentByParam(updateParam);
             log.info("删除评论-service层-deleteComment-出参:{}", count);
             return count;
         }catch (Exception e){

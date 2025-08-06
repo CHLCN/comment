@@ -5,13 +5,16 @@ import com.alibaba.fastjson.JSON;
 import com.chlcn.dto.CommentDetailInfoDto;
 import com.chlcn.dto.CommentInfoDto;
 import com.chlcn.dto.CommentResultInfoDto;
+import com.chlcn.enums.CommentDeleteEnum;
 import com.chlcn.param.*;
 import com.chlcn.service.ICommentService;
 import com.chlcn.utils.BaseResultUtils;
 import com.chlcn.utils.DateUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,6 +42,7 @@ public class CommentController {
     public BaseResult<Boolean> addComment(@RequestBody AddCommentRequestParam param) {
         try{
             log.info("增加评论-controller层-addComment-入参:{}", JSON.toJSONString(param));
+            checkParam(param);
             CommentInfoDto dto = buildCommentInfoDto(param);
             int count = commentService.addComment(dto);
             log.info("增加评论-controller层-addComment-出参:{}", count);
@@ -46,10 +50,18 @@ public class CommentController {
 
         } catch (Exception e) {
             log.error("增加评论-controller层-addComment-异常:",e);
-            return BaseResultUtils.generateFail("增加评论异常");
+            return BaseResultUtils.generateFail("增加评论异常: "+e.getMessage());
 
         }
 
+    }
+
+    private void checkParam(AddCommentRequestParam param) {
+        Assert.isTrue(param!=null,"入参不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getUserId()),"用户id不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getResourceId())&& Long.parseLong(param.getResourceId())!=0L,"资源id不能为空");
+        Assert.isTrue(param.getModule()!=null,"模块不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getContent()),"内容不能为空");
     }
 
     private static CommentInfoDto buildCommentInfoDto(AddCommentRequestParam param) {
@@ -76,15 +88,28 @@ public class CommentController {
     public BaseResult<Boolean> deleteComment(@RequestBody DelCommentRequestParam param) {
         try{
             log.info("删除评论-controller层-deleteComment-入参:{}", JSON.toJSONString(param));
+            // 参数校验
+            checkDeleteCommentParam(param);
             CommentInfoDto dto = getCommentInfoDto(param);
             int count = commentService.deleteComment(dto);
             log.info("删除评论-controller层-deleteComment-出参:{}", count);
+            if(count <= 0){
+                return BaseResultUtils.generateFail("删除评论失败");
+            }
             return BaseResultUtils.generateSuccess(count>0);
         } catch (Exception e) {
             log.error("删除评论-controller层-deleteComment-出参:",e);
             return BaseResultUtils.generateFail("删除评论异常");
         }
 
+    }
+
+    private void checkDeleteCommentParam(DelCommentRequestParam param) {
+        Assert.isTrue(param!=null,"参数不能为空");
+        Assert.isTrue(param.getModule()!=null,"模块不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getUserId()),"用户id不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getCommentId()),"评论id不能为空");
+        Assert.isTrue(StringUtils.isNotBlank(param.getResourceId()), "资源id不能为空");
     }
 
     private static CommentInfoDto getCommentInfoDto(DelCommentRequestParam param) {
@@ -94,6 +119,7 @@ public class CommentController {
         dto.setModule(param.getModule());
         dto.setResourceId(Long.valueOf(param.getResourceId()));
         dto.setUpdateTime(new Date());
+        dto.setIsDelete(CommentDeleteEnum.DELETED.getCode());
         return dto;
     }
 
@@ -169,6 +195,7 @@ public class CommentController {
         commentInfoDto.setOrder(param.getOrder());
         commentInfoDto.setPageNum(param.getPageNum());
         commentInfoDto.setPageSize(param.getPageSize());
+        commentInfoDto.setIsDelete(CommentDeleteEnum.DELETED.getCode());
 
         return commentInfoDto;
     }
