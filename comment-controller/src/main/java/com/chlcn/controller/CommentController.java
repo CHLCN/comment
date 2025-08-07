@@ -195,7 +195,7 @@ public class CommentController {
         commentInfoDto.setOrder(param.getOrder());
         commentInfoDto.setPageNum(param.getPageNum());
         commentInfoDto.setPageSize(param.getPageSize());
-        commentInfoDto.setIsDelete(CommentDeleteEnum.DELETED.getCode());
+        commentInfoDto.setIsDelete(CommentDeleteEnum.NORMAL.getCode());
 
         return commentInfoDto;
     }

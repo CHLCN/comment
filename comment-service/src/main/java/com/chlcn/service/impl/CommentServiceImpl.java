@@ -8,7 +8,9 @@ import com.chlcn.entity.CommentEntity;
 import com.chlcn.entity.CommentParam;
 import com.chlcn.mapper.CommentMapper;
 import com.chlcn.service.ICommentService;
+import com.chlcn.utils.DFAService;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,10 @@ public class CommentServiceImpl implements ICommentService {
     @Autowired
     private CommentMapper commentMapper;
 
+    @Autowired
+    private DFAService dfaService;
+    private static final char STAR = '*';
+
     /**
      * 增加评论
      * @param dto
@@ -39,6 +45,11 @@ public class CommentServiceImpl implements ICommentService {
             log.info("增加评论-service层-addComment-入参:{}", JSON.toJSONString(dto));
             CommentEntity commentEntity = new CommentEntity();
             BeanUtils.copyProperties(dto, commentEntity);
+            // 敏感词匹配
+            log.info("DFA过滤算法-过滤前:{}",commentEntity.getContent());
+            String filterContent = dfaService.checkSensitiveWord(commentEntity.getContent(), STAR);
+            log.info("DFA过滤算法-过滤后:{}",filterContent);
+            commentEntity.setContent(filterContent);
             int count = commentMapper.addComment(commentEntity);
             log.info("增加评论-service层-addComment-出参:{}", count);
             return count;

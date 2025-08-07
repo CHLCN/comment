@@ -5,8 +5,10 @@ import java.util.List;
 
 import com.chlcn.entity.TbSensitiveWords;
 import com.chlcn.entity.TbSensitiveWordsExample;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface TbSensitiveWordsDao {
     long countByExample(TbSensitiveWordsExample example);
 
